@@ -24,6 +24,10 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 
+#set nginx configs
+set :nginx_sites_available_path, "/etc/nginx/sites-available"
+set :nginx_sites_enabled_path, "/etc/nginx/sites-enabled"
+
 ## Defaults:
 # set :scm,           :git
 # set :branch,        :master
@@ -65,6 +69,13 @@ namespace :deploy do
       before 'deploy:restart', 'puma:start'
       invoke 'deploy'
     end
+  end
+
+  desc 'Upload nginx configuration'
+  task :configure_nginx do 
+  	on roles(:web) do
+  		invoke "puma:nginx_config"
+  	end
   end
 
   desc 'Restart application'
