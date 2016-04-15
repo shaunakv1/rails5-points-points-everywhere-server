@@ -2,7 +2,7 @@
 # Change these
 server 'saturn.georati.com', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@github.com:shaunakv1/rails5-points-points-everywhere-server.git'
+set :repo_url,        'https://github.com/shaunakv1/rails5-points-points-everywhere-server.git'
 set :application,     'points-points-everywhere'
 set :user,            'root'
 set :puma_threads,    [4, 16]
@@ -27,6 +27,9 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 #set nginx configs
 set :nginx_sites_available_path, "/etc/nginx/sites-available"
 set :nginx_sites_enabled_path, "/etc/nginx/sites-enabled"
+
+#rvm settings
+set :rvm_ruby_version, '2.3.0@points-points-everywhere'
 
 ## Defaults:
 # set :scm,           :git
