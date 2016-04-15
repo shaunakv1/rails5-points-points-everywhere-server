@@ -28,7 +28,7 @@ test:
 
 production:
   <<: *default
-  database: ppe_production
+  database: ppe_development
   host: <%= ENV['DATABASE_MASTER_HOST'] %>
   username: <%= ENV['DATABASE_MASTER_U'] %> 
   password: <%= ENV['DATABASE_MASTER_P'] %>
