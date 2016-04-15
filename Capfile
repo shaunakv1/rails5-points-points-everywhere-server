@@ -17,6 +17,7 @@ require 'capistrano/rails/migrations'
 require 'capistrano/bundler'
 require 'capistrano/rvm'
 require 'capistrano/puma'
+require 'capistrano/puma/nginx'
 require 'airbrussh/capistrano'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
