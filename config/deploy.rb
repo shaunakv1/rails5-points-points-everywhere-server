@@ -4,7 +4,7 @@ server 'saturn.georati.com', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'https://github.com/shaunakv1/rails5-points-points-everywhere-server.git'
 set :application,     'points-points-everywhere'
-set :user,            'root'
+set :user,            'shaunak'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
