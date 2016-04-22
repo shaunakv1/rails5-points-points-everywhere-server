@@ -6,9 +6,9 @@ server {
   listen 80 default_server deferred;
   server_name saturn.georati.com;
 
-  root <%= "/#{fetch(:user)}/apps/#{fetch(:application)}/current/public" %>;
-  access_log <%= "/#{fetch(:user)}/apps/#{fetch(:application)}/current/log/nginx.access.log" %>;
-  error_log <%= "/#{fetch(:user)}/apps/#{fetch(:application)}/current/log/nginx.error.log info" %>;
+  root <%= "/home/#{fetch(:user)}/apps/#{fetch(:application)}/current/public" %>;
+  access_log <%= "/home/#{fetch(:user)}/apps/#{fetch(:application)}/current/log/nginx.access.log" %>;
+  error_log <%= "/home/#{fetch(:user)}/apps/#{fetch(:application)}/current/log/nginx.error.log info" %>;
 
   location ^~ /assets/ {
     gzip_static on;
